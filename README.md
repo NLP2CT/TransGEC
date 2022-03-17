@@ -54,7 +54,7 @@ pip install --editable .
 ```
 ### Prepare the GEC training data.
 - Download `cLang-8` GEC training data for English, German and Russian from [here](https://github.com/google-research-datasets/clang8). Download `BEA2019 Shared Task` from [BEA2019](https://www.cl.cam.ac.uk/research/nl/bea2019st/). Download `NLPCC-2018 Shared Task` for Chinese from [NLPCC2018](https://github.com/zhaoyyoo/NLPCC2018_GEC). The test and dev sets, you can download from [CoNLL2013](https://www.comp.nus.edu.sg/~nlp/conll13st/release2.3.1.tar.gz), [CoNLL2014](https://www.comp.nus.edu.sg/~nlp/conll14st/conll14st-test-data.tar.gz) for English;  [Falko-MERLIN](http://www.sfs.uni-tuebingen.de/~adriane/download/wnut2018/data.tar.gz) for German;  [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC) for Russian.
-- Download Chinese tokenizer From [PKUNLP](https://drive.google.com/file/d/1LmTVBqCNnPlnbvvql5QuLitKGdgZcJnv/view?usp=sharing).
+- Download Chinese tokenizer from [PKUNLP](https://drive.google.com/file/d/1LmTVBqCNnPlnbvvql5QuLitKGdgZcJnv/view?usp=sharing).
 
 
 
