@@ -6,7 +6,7 @@ If you want to get the translationese from UN/WMT corpus, you should train trans
   - CUDA & cudatoolkit >= 9.0
 
    ```
-   git clone https://github.com/NLP2CT/trans4GEC/bert-tf
+   git clone https://github.com/NLP2CT/Trans4GEC.git
    ```
 - Step 2: Download Data and Models 
   - Download the `UNv1.0.en-zh.tar.gz.00-01` for English/Chinese and `UNv1.0.en-ru.tar.gz.00-02` corpus for Russian from [UNcorpus](https://conferences.unite.un.org/uncorpus/en/downloadoverview), and `WMT16 en-de` corpus for German from [WMT16](https://www.statmt.org/wmt16/translation-task.html). 

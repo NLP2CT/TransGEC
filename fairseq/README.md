@@ -12,7 +12,6 @@ python -m spacy download en_core_web_sm
 python -m spacy download de_core_news_sm
 python -m spacy download ru_core_news_sm
 
-git clone https://github.com/NLP2CT/trans4GEC/fairseq
 cd fairseq
 pip install --editable .
 ```

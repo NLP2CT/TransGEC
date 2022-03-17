@@ -8,7 +8,6 @@ This implementation is based on huggingface/[transformers(v4.13.0)](https://gith
 - Python version >= 3.6
 
 ```
-git clone https://github.com/NLP2CT/trans4GEC/transformer
 cd transformer
 pip install .
 pip install -r requirements.txt
