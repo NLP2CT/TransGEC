@@ -1,7 +1,7 @@
-## Exploiting Translationese for GEC on Transformer Architecture
+# Exploiting Translationese for GEC on Transformer Architecture
 If you want to use the obtained translationese as input for data augmentation for GEC on `Transformer Architecture`, please follow the instructions below.
 
-### Requirements and Installation
+## Requirements and Installation
 
 This implementation is based on [fairseq(v0.10.2)](https://github.com/pytorch/fairseq)
 - [PyTorch](https://pytorch.org/) version >= 1.2.0
@@ -16,13 +16,13 @@ git clone https://github.com/NLP2CT/trans4GEC/fairseq
 cd fairseq
 pip install --editable .
 ```
-### Prepare the GEC training data.
+## Prepare the GEC training data.
 - Download `cLang-8` GEC training data for English, German and Russian from [here](https://github.com/google-research-datasets/clang8). Download `BEA2019 Shared Task` from [BEA2019](https://www.cl.cam.ac.uk/research/nl/bea2019st/). Download `NLPCC-2018 Shared Task` for Chinese from [NLPCC2018](https://github.com/zhaoyyoo/NLPCC2018_GEC). The test and dev sets, you can download from [CoNLL2013](https://www.comp.nus.edu.sg/~nlp/conll13st/release2.3.1.tar.gz), [CoNLL2014](https://www.comp.nus.edu.sg/~nlp/conll14st/conll14st-test-data.tar.gz) for English;  [Falko-MERLIN](http://www.sfs.uni-tuebingen.de/~adriane/download/wnut2018/data.tar.gz) for German;  [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC) for Russian.
 - Download Chinese tokenizer From [PKUNLP](https://drive.google.com/file/d/1LmTVBqCNnPlnbvvql5QuLitKGdgZcJnv/view?usp=sharing).
 
 
 
-### Generate Synthetic Data
+## Generate Synthetic Data
 1. Tokenization
   ```
   sh tokenization.sh
@@ -31,7 +31,7 @@ pip install --editable .
    ```
    python /fairseq/add-noise.py  -e 1 -s $seed
    ```
-### Data Preprocessing
+## Data Preprocessing
 1. The bpe for English, German and Russian using the script `bpe.sh`. Chinese without bpe, because of the character splits.
 2. Preprocessing
   ```  

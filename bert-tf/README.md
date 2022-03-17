@@ -1,9 +1,3 @@
-
-# Understanding and Improving Grammaticial Error Correction with Translationese
-
-The code for Understanding and Improving Grammaticial Error Correction with Translationese. Our models were trained using the NVIDIA Tesla V100 32G and A100 40G GPUs.
-
-
 ## For Training Translationese Classifier
 If you want to get the translationese from UN/WMT corpus, you should train translationese classifiers first. You can simply follow the instructions in this section:
 - Step 1: Requirements and Installation
