@@ -40,7 +40,8 @@ data_xx/
 
 ## Quik Links
 
-Detailed implementation of the current work is available on the following links: 
+Please refer to the follows for more information on our work:
+
 - [Training Translationese Classifiers](https://github.com/NLP2CT/Trans4GEC/tree/main/bert-tf )
 - [Exploiting Translationese for GEC on Transformer Architecture](https://github.com/NLP2CT/Trans4GEC/tree/main/fairseq)
 - [Exploiting Translationese for GEC on (m)T5-Large Pre-trained Language Models](https://github.com/NLP2CT/Trans4GEC/tree/main/transformers)
