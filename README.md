@@ -120,7 +120,7 @@ This implementation is based on huggingface/[transformers(v4.13.0)](https://gith
 - Python version >= 3.6
 
 ```
-cd transformer
+cd transformers
 pip install .
 pip install -r requirements.txt
 ```
