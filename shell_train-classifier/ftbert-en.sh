@@ -15,7 +15,7 @@ CUDA_VISIBLE_DEVICES=0 python /Your-path/bert-tf/run_classifier.py  \
   --train_batch_size=32 \
   --learning_rate=2e-5 \
   --num_train_epochs=2.0 \
-  --output_dir=/Your-path/out-model | tee /Your-path/validate_result.txt
+  --output_dir=/Your-path/out-en-model | tee /Your-path/validate_result.txt
   
   
 
