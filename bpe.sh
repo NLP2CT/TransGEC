@@ -28,8 +28,8 @@ cat /data/train_clang-ru.src translationese.de.tok.error > /Russian/train.src
 cat /data/train_clang-ru.tgt translationese.ru.tok.correct > /Russian/train.tgt
  
 # Note: chinese without bpe
-cat base/train_clang-zh.src translationese.zh.tok.error > /Chinese/trans/train.src
-cat base/train_clang-zh.tgt translationese.zh.tok.correct > /Chinese/trans/train.tgt
+cat /data/train-zh.src translationese.zh.tok.error > /Chinese/trans/train.src
+cat /data/train-zh.tgt translationese.zh.tok.correct > /Chinese/trans/train.tgt
 
 
 # ---- take cLang8-en as an example ----
