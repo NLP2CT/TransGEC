@@ -1,3 +1,5 @@
+# --- Chinese ---
+
 for style in base native mix trans
 do
   for seed in $seed1 $seed2 $seed3
