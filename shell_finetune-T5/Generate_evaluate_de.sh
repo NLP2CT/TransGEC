@@ -5,7 +5,7 @@ OUT=$ROOT/out_dir
   
 # ---- generation ----
 python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
-    --model_name_or_path $OUT/model-en/checkpoint \
+    --model_name_or_path $OUT/model-de/checkpoint \
     --do_predict \
     --source_lang error \
     --target_lang correct \
@@ -15,7 +15,7 @@ python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
     --source_prefix "translate German to German: " \
     --validation_file $DATA/dev.json \ \
     --test_file $DATA/test.json \ \
-    --output_dir $OUT/model-en/checkpoint/gen \
+    --output_dir $OUT/model-de/checkpoint/gen \
     --num_beams=5 \
     --overwrite_output_dir \
     --predict_with_generate
