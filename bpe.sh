@@ -42,7 +42,7 @@ do
    for tag in tgt src
    do
     
-subword-nmt apply-bpe -c /bp-molde/bpe_en.model < /English/$foloder/$tyle.$tag > /English/$foloder/$tyle.bpe.$tag
+subword-nmt apply-bpe -c /bp-molde/bpe_en.model < /English/$folder/$tyle.$tag > /English/$folder/$tyle.bpe.$tag
 
    done 
  done 
