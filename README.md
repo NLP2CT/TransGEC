@@ -27,6 +27,16 @@ German | `TransGEC` | Fine-tuned with cLang8-de and translationese | [TransGEC.d
 Russain | `TransGEC` | Fine-tuned with cLang8-ru and translationese | [TransGEC.ru.model](xxx) | [data.ru](xxx)
 Chinese | `TransGEC` | Fine-tuned with Lang8-zh and translationese | [TransGEC.zh.model](xxx) | [data.zh](xxx)
 
+The directory of the downloaded data：
+
+```
+data_xx/
+ |--train
+   |--original
+   |--translationese
+ |--dev
+ |--test
+```
 
 
 
