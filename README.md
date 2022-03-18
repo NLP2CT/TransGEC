@@ -23,9 +23,9 @@ pip install -r requirements.txt
 Lang. | Model | Description | Model-Download | Data-Download
 --- | --- | --- | --- | ---
 English | `T5-large` | Fine-tuned with cLang8-en and translationese | [T5-GEC-en](xxx) | [Train-data-en](xxx)
-German | `mT5-large` | Fine-tuned with cLang8-de and translationese | [T5-GEC-de](xxx) | [Train-data-de](xxx)
-Russain | `mT5-large` | Fine-tuned with cLang8-ru and translationese | [T5-GEC-ru](xxx) | [Train-data-ru](xxx)
-Chinese | `mT5-large` | Fine-tuned with Lang8-zh and translationese | [T5-GEC-zh](xxx) | [Train-data-zh](xxx)
+German | `mT5-large` | Fine-tuned with cLang8-de and translationese | [mT5-GEC-de](xxx) | [Train-data-de](xxx)
+Russain | `mT5-large` | Fine-tuned with cLang8-ru and translationese | [mT5-GEC-ru](xxx) | [Train-data-ru](xxx)
+Chinese | `mT5-large` | Fine-tuned with Lang8-zh and translationese | [mT5-GEC-zh](xxx) | [Train-data-zh](xxx)
 
 
 
