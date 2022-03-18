@@ -41,6 +41,8 @@ data_xx/
 ## Quik Links
 
 If you want to 
+- [Training Translationese Classifiers]()
+- []
 
 
 
