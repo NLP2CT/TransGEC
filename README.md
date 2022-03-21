@@ -32,10 +32,13 @@ The format of the directory of the downloaded data is as follows：
 ```
 data_xx/
  |--train
-   |--original
-   |--translationese
+   |--translationese.tsv
+   |--train-translationese.json
  |--dev
+   |--dev.xx.json
  |--test
+   |--test.xx.json
+   |--test.xx.M2
 ```
 
 ## Quik Links
