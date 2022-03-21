@@ -22,11 +22,17 @@ python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
     
 # ---- M2 scorer ----
 python $HUG_CODE/evaluation_scorer/tokenization/spacy_en.py \
-       OUT/checkpoint/gen/generated_predictions.txt \
-       OUT/checkpoint/gen/tok-generated_predictions.txt
+       $OUT/checkpoint/gen/generated_predictions.txt \
+       $OUT/checkpoint/gen/tok-generated_predictions.txt
+ 
+# due to the tokenizer is different for CoNLL14
+python $HUG_CODE/evaluation_scorer/tokenization/replace.py \
+       $OUT/checkpoint/gen/tok-generated_predictions.txt \
+       $OUT/checkpoint/gen/rep-tok-generated_predictions.txt
+
 
 python2 $HUG_CODE/evaluation_scorer/m2scorer/scripts/m2scorer.py \
-         $OUT/checkpoint/gen/tok-generated_predictions.txt \
+        $OUT/checkpoint/gen/rep-tok-generated_predictions.txt \
         $OUT/evaluation_scorer/m2scorer/conll14st-test-data/official-2014.combined.m2 \
         | tee $OUT/checkpoint/gen/result_score.txt
 
