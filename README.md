@@ -42,7 +42,7 @@ data_xx/
 ```
 
 ### Usage
-If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec-generate.sh` for detailed information.
+If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
 
 
 ## Quik Links
