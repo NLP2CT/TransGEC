@@ -23,8 +23,8 @@ pip install -r requirements.txt
 Lang. | Model | Description | Model-Download | Data-Download
 --- | --- | --- | --- | ---
 English | `TransGEC` | Fine-tuned with cLang8-en and translationese | [TransGEC.en.model](https://drive.google.com/file/d/1_R1PfCAopesq-kewPjbmWf7XHjOxyCBB/view?usp=sharing) | [data.en](https://drive.google.com/file/d/11tTJlKm6Gaj783vEWJLd21H9Ccq_Yw3b/view?usp=sharing)
-German | `TransGEC` | Fine-tuned with cLang8-de and translationese | [TransGEC.de.model](xxx) | [data.de](https://drive.google.com/file/d/1zZiiyDWTfIIuCdz1FR4o9xz2XiDv5lDe/view?usp=sharing)
-Russain | `TransGEC` | Fine-tuned with cLang8-ru and translationese | [TransGEC.ru.model](xxx) | [data.ru](https://drive.google.com/file/d/1uvL9K_7YsoW5GiU5SfhMWDVNqCwzUeyp/view?usp=sharing)
+German | `TransGEC` | Fine-tuned with cLang8-de and translationese | [TransGEC.de.model](https://drive.google.com/file/d/1jRN2Wa1IxX0L7jtOtaxZvB7fIuw6LEaC/view?usp=sharing) | [data.de](https://drive.google.com/file/d/1zZiiyDWTfIIuCdz1FR4o9xz2XiDv5lDe/view?usp=sharing)
+Russain | `TransGEC` | Fine-tuned with cLang8-ru and translationese | [TransGEC.ru.model](https://drive.google.com/file/d/1FfOeaKm3wviDyQluv9yPjlrVT18ojBC8/view?usp=sharing) | [data.ru](https://drive.google.com/file/d/1uvL9K_7YsoW5GiU5SfhMWDVNqCwzUeyp/view?usp=sharing)
 Chinese | `TransGEC` | Fine-tuned with Lang8-zh and translationese | [TransGEC.zh.model](https://drive.google.com/file/d/17PyCWr7AEJ84HhaB3z7qRgui-fQRGHWX/view?usp=sharing) | [data.zh](https://drive.google.com/file/d/1gbrDW5JRlYqqek2C2MM47OAPNfheaWoY/view?usp=sharing)
 
 The format of the directory of the downloaded data is as follows：
