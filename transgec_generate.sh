@@ -117,7 +117,7 @@ python $YOUR_PATH/script/tokenization/en2zh_char.py \
        $YOUR_PATH/TransGEC.zh.model/gen/generated_predictions.txt \
        $YOUR_PATH/TransGEC.zh.model/gen/char-generated_predictions.txt \    
     
-# remember download PKUNLP toolkit from: https://drive.google.com/file/d/1LmTVBqCNnPlnbvvql5QuLitKGdgZcJnv/view
+# remember to download PKUNLP toolkit from: https://drive.google.com/file/d/1LmTVBqCNnPlnbvvql5QuLitKGdgZcJnv/view
 python $YOUR_PATH/script/tokenization/pkunlp/pku_tok.py \
        $YOUR_PATH/TransGEC.zh.model/gen/char-generated_predictions.txt \
        $YOUR_PATH/TransGEC.zh.model/gen/tok-generated_predictions.txt
