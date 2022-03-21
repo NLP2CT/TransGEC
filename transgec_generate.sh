@@ -113,7 +113,7 @@ python $YOUR_PATH/examples/pytorch/translation/run_maxtokens_translation.py \
     --predict_with_generate
     
 # Keep the Chinese symbols uniform
-python $YOUR_PATH/script/en2zh_char.py \
+python $YOUR_PATH/script/tokenization/en2zh_char.py \
        $YOUR_PATH/TransGEC.zh.model/gen/generated_predictions.txt \
        $YOUR_PATH/TransGEC.zh.model/gen/char-generated_predictions.txt \    
     
