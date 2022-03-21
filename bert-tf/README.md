@@ -10,7 +10,7 @@ If you want to get the translationese from UN/WMT corpus, you should train trans
    ```
 - Step 2: Download Data and Models 
   - Download the `UNv1.0.en-zh.tar.gz.00-01` for English/Chinese and `UNv1.0.en-ru.tar.gz.00-02` corpus for Russian from [UNcorpus](https://conferences.unite.un.org/uncorpus/en/downloadoverview), and `WMT16 en-de` corpus for German from [WMT16](https://www.statmt.org/wmt16/translation-task.html). 
-   - Download the `data` for training the classifiers from [GoogleDrive](https://www.statmt.org/wmt16/translation-task.html), where the `train_data-en/zh/de/ru` for Engish/ Chinese/ German/ Russian.
+   - Download the `data` for training the classifiers from [GoogleDrive](https://drive.google.com/file/d/1cw06k3MChCHD36hFP-93Wd3Q77W7lWrD), where the `train_data-en/zh/de/ru` for Engish/ Chinese/ German/ Russian.
    - Download the pre-training models from [BERT-Base](https://storage.googleapis.com/bert_models/2018_10_18/cased_L-12_H-768_A-12.zip), [Multi-BERT-Base](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip),  [Chinese-BERT-Base](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)
    
 - Step 3: Fine-tuning and Evaluation
