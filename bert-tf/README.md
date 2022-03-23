@@ -14,7 +14,7 @@ If you want to get the translationese from UN/WMT corpus, you should train trans
    - Download the pre-training models from [BERT-Base](https://storage.googleapis.com/bert_models/2018_10_18/cased_L-12_H-768_A-12.zip), [Multi-BERT-Base](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip),  [Chinese-BERT-Base](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)
    
 ### Fine-tuning and Evaluation
-  - Fine-tuning English, Chinese, German and Russian BERT-based classifiers:
+  Fine-tuning English, Chinese, German and Russian BERT-based classifiers:
    ```
    sh /shell_train-classifier/ftbert-en.sh
    sh /shell_train-classifier/ftbert-zh.sh
