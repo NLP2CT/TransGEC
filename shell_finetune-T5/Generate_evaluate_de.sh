@@ -7,14 +7,14 @@ OUT=$ROOT/out_dir
 python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
     --model_name_or_path $OUT/model-de/checkpoint \
     --do_predict \
-    --source_lang error \
-    --target_lang correct \
+    --source_lang de \
+    --target_lang der \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 4 \
     --max_tokens_per_batch 512 \
     --source_prefix "translate German to German: " \
-    --validation_file $DATA/dev.json \ \
-    --test_file $DATA/test.json \ \
+    --validation_file $DATA/dev.de.json \ \
+    --test_file $DATA/test.de.json \ \
     --output_dir $OUT/model-de/checkpoint/gen \
     --num_beams=5 \
     --overwrite_output_dir \
