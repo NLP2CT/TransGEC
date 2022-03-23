@@ -2,6 +2,15 @@
 
 The code for Understanding and Improving Grammaticial Error Correction with Translationese. Our models were trained using the NVIDIA Tesla V100 32G and A100 40G GPUs.
 
+## Citation
+
+
+```
+Understanding and Improving Grammaticial Error Correction with Translationese,XXX
+
+```
+
+
 ## Simplified Instruction
 We released the translationese GEC models (`TransGEC`) fine-tuned on (m)T5-large pre-trained language model. If you want to quickly explore our job, the following instructions may be useful to you.
 
@@ -55,10 +64,3 @@ Please refer to the following instructions for more information on our work:
 
 
 
-## Citation
-
-
-```
-Understanding and Improving Grammaticial Error Correction with Translationese
-
-```
