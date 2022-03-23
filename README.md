@@ -55,8 +55,26 @@ We released the translationese GEC models (`TransGEC`) fine-tuned on (m)T5-large
     If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
 
 ## Usage
+If you want to fine-tune (m)T5-large pre-trained language model from scratch using translationese, please follow below steps.
 
+### Fine-tuning
+```
+sh /shell_finetune-T5/train_en.sh
+sh /shell_finetune-T5/train_de.sh
+sh /shell_finetune-T5/train_ru.sh
+sh /shell_finetune-T5/train_zh.sh
+```
 
+## Generation and Evaluation
+```
+sh /shell_finetune-T5/Generate_evaluate_en.sh
+sh /shell_finetune-T5/Generate_evaluate_de.sh
+sh /shell_finetune-T5/Generate_evaluate_ru.sh
+sh /shell_finetune-T5/Generate_evaluate_zh.sh
+```
+Note: The tokenizier for BEA2019 English using [spaCy(v1.9.0)](https://spacy.io/).
+
+  
 
 ## Quick Links
 
