@@ -55,7 +55,7 @@ We released the translationese GEC models (`TransGEC`) fine-tuned on (m)T5-large
     If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
 
 ## Usage
-If you want to fine-tune (m)T5-large pre-trained language model from scratch using translationese, please follow below steps.
+If you want to fine-tune (m)T5-large pre-trained language model from scratch using translationese, please follow the steps below.
 
 ### Fine-tuning
 ```
@@ -81,8 +81,8 @@ Note: The tokenizier for BEA2019 English using [spaCy(v1.9.0)](https://spacy.io/
 Please refer to the following instructions for more information on our work:
 
 - [Training Translationese Classifiers](https://github.com/NLP2CT/Trans4GEC/tree/main/bert-tf )
-- [Exploiting Translationese for GEC on Transformer Architecture](https://github.com/NLP2CT/Trans4GEC/tree/main/fairseq)
-- [Exploiting Translationese for GEC on (m)T5-Large Pre-trained Language Models](https://github.com/NLP2CT/Trans4GEC/tree/main/transformers)
+- [Training Transformer Models with Translationese](https://github.com/NLP2CT/Trans4GEC/tree/main/fairseq)
+- [Fine-tuning (m)T5-Large Models with Translationese](https://github.com/NLP2CT/Trans4GEC/tree/main/transformers)
 
 
 
