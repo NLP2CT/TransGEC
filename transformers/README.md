@@ -13,13 +13,13 @@ pip install .
 pip install -r requirements.txt
 ```
 ## Prepare the detokenizer for GEC languages
-- Download [Moses Detokenizer](https://raw.githubusercontent.com/moses-smt/mosesdecoder/master/scripts/tokenizer/detokenizer.perl) for English/German/Russian.
+Download [Moses Detokenizer](https://raw.githubusercontent.com/moses-smt/mosesdecoder/master/scripts/tokenizer/detokenizer.perl) for English/German/Russian.
 ```
 sh  detokenization.sh
 ```
 
 ## Data Preprocessing
-- The train/dev/test sets need to be converted to custom JSONLINES files. Our synthetic data with a `special tag` at the beginning of every source sentence.
+The train/dev/test sets need to be converted to custom JSONLINES files. Our synthetic data with a `special tag` at the beginning of every source sentence.
 ```
 sh tsv2json.sh
 ```
