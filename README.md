@@ -36,8 +36,7 @@ We released the translationese GEC models (`TransGEC`) fine-tuned on (m)T5-large
     Ru | `TransGEC` | Fine-tuned with cLang8-ru and translationese | [TransGEC.ru.model](https://drive.google.com/file/d/1FfOeaKm3wviDyQluv9yPjlrVT18ojBC8/view?usp=sharing) | [data.ru](https://drive.google.com/file/d/1uvL9K_7YsoW5GiU5SfhMWDVNqCwzUeyp/view?usp=sharing)
     Zh | `TransGEC` | Fine-tuned with Lang8-zh and translationese | [TransGEC.zh.model](https://drive.google.com/file/d/17PyCWr7AEJ84HhaB3z7qRgui-fQRGHWX/view?usp=sharing) | [data.zh](https://drive.google.com/file/d/1gbrDW5JRlYqqek2C2MM47OAPNfheaWoY/view?usp=sharing)
 
-    The format of the directory of the downloaded data is as followsï¼š
-
+    The format of the directory of the downloaded data is as followsï¼?
     ```
     data_xx/
      |--train
@@ -72,9 +71,6 @@ sh /shell_finetune-T5/Generate_evaluate_de.sh
 sh /shell_finetune-T5/Generate_evaluate_ru.sh
 sh /shell_finetune-T5/Generate_evaluate_zh.sh
 ```
-Note: The tokenizier for BEA2019 English using [spaCy(v1.9.0)](https://spacy.io/).
-
-  
 
 ## Quick Links
 
