@@ -10,17 +10,17 @@ OUT=$ROOT/out_dir
 # ---- Train -----
 cd $HUG_CODE
 CUDA_VISIBLE_DEVICES=0,1,2,3 MKL_THREADING_LAYER=GNU python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
-    --model_name_or_path t5-large \
+    --model_name_or_path mt5-large \
     --do_train \
     --do_eval \
     --do_predict \
     --source_lang error \
     --target_lang corret \
     --source_prefix "translate Chinese to Chinese: " \
-    --train_file $DATA/train.json \
-    --validation_file $DATA/dev.json \
-    --test_file $DATA/test14.json \
-    --output_dir $OUT/model-en \
+    --train_file $DATA/train.zh.translationese.json \
+    --validation_file $DATA/dev.zh.json \
+    --test_file $DATA/test.zh.json \
+    --output_dir $OUT/model-zh \
     --per_device_train_batch_size 12 \
     --per_device_eval_batch_size 12 \
     --max_tokens_per_batch 1536 \
