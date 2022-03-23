@@ -16,16 +16,16 @@ We released the translationese GEC models (`TransGEC`) fine-tuned on (m)T5-large
 
 - Step 1:  Requirements and Installation
 
-This implementation is based on huggingface/[transformers(v4.13.0)](https://github.com/huggingface/transformers)
-  - [PyTorch](https://pytorch.org/) version >= 1.3.1
-  - Python version >= 3.6
+    This implementation is based on huggingface/[transformers(v4.13.0)](https://github.com/huggingface/transformers)
+    - [PyTorch](https://pytorch.org/) version >= 1.3.1
+    - Python version >= 3.6
 
- ```
- git clone https://github.com/NLP2CT/Trans4GEC.git
- cd transformers
- pip install .
- pip install -r requirements.txt
- ```
+     ```
+   git clone https://github.com/NLP2CT/Trans4GEC.git
+   cd transformers
+   pip install .
+   pip install -r requirements.txt
+   ```
 
 - Step 2:  Download Translationese (m)T5-GEC Models and Data
 
