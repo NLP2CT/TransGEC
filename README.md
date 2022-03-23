@@ -14,7 +14,7 @@ Understanding and Improving Grammaticial Error Correction with Translationese,XX
 ## Simplified Instruction
 We released the translationese GEC models (`TransGEC`) fine-tuned on (m)T5-large pre-trained language model. If you want to quickly explore our job, the following instructions may be useful to you.
 
-### Requirements and Installation
+- Step 1.  Requirements and Installation
 
 This implementation is based on huggingface/[transformers(v4.13.0)](https://github.com/huggingface/transformers)
 - [PyTorch](https://pytorch.org/) version >= 1.3.1
@@ -27,7 +27,7 @@ pip install .
 pip install -r requirements.txt
 ```
 
-###  Download Translationese (m)T5-GEC Models and Data
+- Step 2.  Download Translationese (m)T5-GEC Models and Data
 
 Lang. | Model | Description | Model-Download | Data-Download
 --- | --- | --- | --- | ---
@@ -50,8 +50,11 @@ data_xx/
    |--test.xx.M2
 ```
 
-### Generation and Evaluation
+- Step 3. Generation and Evaluation
 If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
+
+## Usage
+
 
 
 ## Quick Links
