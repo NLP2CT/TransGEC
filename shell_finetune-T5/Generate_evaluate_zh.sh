@@ -7,14 +7,14 @@ OUT=$ROOT/out_dir
 python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
     --model_name_or_path $OUT/model-zh/checkpoint \
     --do_predict \
-    --source_lang error \
-    --target_lang correct \
+    --source_lang zh \
+    --target_lang zhr \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 4 \
     --max_tokens_per_batch 512 \
     --source_prefix "translate Chinese to Chinese: " \
-    --validation_file $DATA/dev.json \ \
-    --test_file $DATA/test.json \
+    --validation_file $DATA/dev.zh.json \ \
+    --test_file $DATA/test.zh.json \
     --output_dir $OUT/model-zh/checkpoint/gen \
     --num_beams=5 \
     --overwrite_output_dir \
