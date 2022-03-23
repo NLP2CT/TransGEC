@@ -54,7 +54,7 @@ data_xx/
 If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
 
 
-## Quik Links
+## Quick Links
 
 Please refer to the following instructions for more information on our work:
 
