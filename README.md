@@ -36,22 +36,22 @@ We released the translationese GEC models (`TransGEC`) fine-tuned on (m)T5-large
     Ru | `TransGEC` | Fine-tuned with cLang8-ru and translationese | [TransGEC.ru.model](https://drive.google.com/file/d/1FfOeaKm3wviDyQluv9yPjlrVT18ojBC8/view?usp=sharing) | [data.ru](https://drive.google.com/file/d/1uvL9K_7YsoW5GiU5SfhMWDVNqCwzUeyp/view?usp=sharing)
     Zh | `TransGEC` | Fine-tuned with Lang8-zh and translationese | [TransGEC.zh.model](https://drive.google.com/file/d/17PyCWr7AEJ84HhaB3z7qRgui-fQRGHWX/view?usp=sharing) | [data.zh](https://drive.google.com/file/d/1gbrDW5JRlYqqek2C2MM47OAPNfheaWoY/view?usp=sharing)
 
-The format of the directory of the downloaded data is as follows：
+    The format of the directory of the downloaded data is as follows：
 
-```
-data_xx/
- |--train
-   |--translationese.tsv
-   |--train-translationese.json
- |--dev
-   |--dev.xx.json
- |--test
-   |--test.xx.json
-   |--test.xx.M2
-```
+    ```
+    data_xx/
+     |--train
+       |--translationese.tsv
+       |--train-translationese.json
+     |--dev
+       |--dev.xx.json
+     |--test
+       |--test.xx.json
+       |--test.xx.M2
+    ```
 
 - Step 3: Generation and Evaluation
-If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
+    If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
 
 ## Usage
 
