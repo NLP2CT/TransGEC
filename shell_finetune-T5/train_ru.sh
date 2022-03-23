@@ -14,8 +14,8 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 MKL_THREADING_LAYER=GNU python $HUG_CODE/examples/p
     --do_train \
     --do_eval \
     --do_predict \
-    --source_lang error \
-    --target_lang corret \
+    --source_lang ru \
+    --target_lang rur \
     --source_prefix "translate Russian to Russian: "  \
     --train_file $DATA/train.ru.translationese.json \
     --validation_file $DATA/dev.ru.json \
