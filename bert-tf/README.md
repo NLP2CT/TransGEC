@@ -21,7 +21,7 @@ If you want to get the translationese from UN/WMT corpus, you should train trans
    sh /shell_train-classifier/ftbert-de.sh
    sh /shell_train-classifier/ftbert-ru.sh
    ```
-### Identify translationese and native texts.
+### Identify Translationese and Native Texts.
 
     ```
     sh /shell_train-classifier/predict-en.sh
