@@ -17,9 +17,9 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 MKL_THREADING_LAYER=GNU python $HUG_CODE/examples/p
     --source_lang error \
     --target_lang correct \
     --source_prefix "translate English to English: " \
-    --train_file $DATA/train.json \
-    --validation_file $DATA/dev.json \
-    --test_file $DATA/test14.json \
+    --train_file $DATA/train.en.transaltionese.json \
+    --validation_file $DATA/dev.en.json \
+    --test_file $DATA/test.en.json \
     --output_dir $OUT/model-en \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 16 \
