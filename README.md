@@ -41,7 +41,7 @@ data_xx/
    |--test.xx.M2
 ```
 
-### Usage
+### Generation and Evaluation
 If you want to use the downloaded TransGEC models to generate and evaluate, please refer to the script `transgec_generate.sh` for detailed information.
 
 
