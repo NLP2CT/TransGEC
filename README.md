@@ -83,7 +83,7 @@ Please refer to the following instructions for more information on our work:
 
 ## Reviewer zX5C:
 Thank you very much for the careful review.
- **Q1** My strongest concern is using machine translated (MT) data for translationese classification. MT introduces errors by itself, but is has also been shown to exhibit different characteristics to human translated data [1,2].
+> **Q1** My strongest concern is using machine translated (MT) data for translationese classification. MT introduces errors by itself, but is has also been shown to exhibit different characteristics to human translated data [1,2].
 [1] Bizzoni, Yuri & Juzek, Tom & España-Bonet, Cristina & Chowdhury, Koel & van Genabith, Josef & Teich, Elke. (2020). How Human is Machine Translationese? Comparing Human and Machine Translations of Text and Speech. 280-290. 10.18653/v1/2020.iwslt-1.34.
 
 [2] Fu, Yingxue & Nederhof, Mark-Jan. (2021). Automatic Classification of Human Translation and Machine Translation: A Study from the Perspective of Lexical Diversity.
