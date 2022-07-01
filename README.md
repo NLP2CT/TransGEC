@@ -81,16 +81,24 @@ Please refer to the following instructions for more information on our work:
 - [Fine-tuning (m)T5-Large Models with Translationese](https://github.com/NLP2CT/Trans4GEC/tree/main/transformers)
 
 
-## Reviewer zX5C:
+## Reviewer NArZ:
 Thank you very much for the careful review.
-> **Q1** My strongest concern is using machine translated (MT) data for translationese classification. MT introduces errors by itself, but is has also been shown to exhibit different characteristics to human translated data [1,2].
-[1] Bizzoni, Yuri & Juzek, Tom & España-Bonet, Cristina & Chowdhury, Koel & van Genabith, Josef & Teich, Elke. (2020). How Human is Machine Translationese? Comparing Human and Machine Translations of Text and Speech. 280-290. 10.18653/v1/2020.iwslt-1.34.
+> **Q1** slightly weak baselines for German and Russian
+Yes, our baselines are slightly weaker than the results by [Rothe et al. (2021)]() based on the T5 xxl model of 11 billion model parameters for German and Russian. Our hardware does not enable us to test our method in such a huge model. However, our method can show consistent improvements for different languages based on the T5 large model, which also can verify its effectiveness.
+> **Q2** SOTA works often use larger amounts of synthetic data, it is not clear whether the proposed method still has better performance with them, although I expect it.
+Thank you for the reminder. The synthetic data used in previous works is mainly composed of native texts, which have a different style from grammatical error correction (GEC) data. In our work, we confirm that GEC models can benefit from using synthetic data in a similar style (i.e., translationese) for both Transformer models and T5 pre-trained language models (PLM). We will follow your suggestion to test more variants to verify it in future works.
+> **Q3** Please refer to https://arxiv.org/pdf/1910.00353 and https://arxiv.org/pdf/2106.03830.pdf for German and Russian SOTA. There methods are not directly comparable with yours, however, the reader should know the works that achieve better scores.
+Thank you for the suggestion. These SOTA results will be provided in our final version.
 
-[2] Fu, Yingxue & Nederhof, Mark-Jan. (2021). Automatic Classification of Human Translation and Machine Translation: A Study from the Perspective of Lexical Diversity.
+> **Q4** It seems that you are training the model on the concatenation of real and synthetic data. Why not to pretrain on synthetic data on the first stage and then finetine on real data? Please refer to https://arxiv.org/pdf/2005.12592 for the details
+Yes. [Omelianchuk et al. (2020)](https://aclanthology.org/2020.bea-1.16.pdf) use a multi-stage training strategy. The first stage is used for pre-training on large synthetic data and the other stages for fine-tuning. In fact, we also implemented a two-stage strategy to finetune T5-large PLM on English GEC data. The results show that the concatenated approach works better ($68.08 F_{0.5}$ vs $67.40 F_{0.5}$ for contact vs two-stage). Our findings are consistent with the results of back-translation work in the field of machine translation, which also trains the models on the concatenation of real and synthetic data [(Sennrich et al., 2016)](https://aclanthology.org/P16-1009.pdf).
+References:
+Kostiantyn Omelianchuk, Vitaliy Atrasevych, Artem Chernodub, and Oleksandr Skurzhanskyi. 2020. GECToR – Grammatical Error Correction: Tag, Not Rewrite. In Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational Applications, pages 163–170, Seattle, WA, USA → Online. Association for Computational Linguistics.
+Rico Sennrich, Barry Haddow, and Alexandra Birch. 2016. Improving Neural Machine Translation Models with Monolingual Data. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 86–96, Berlin, Germany. Association for Computational Linguistics.
+> **Q5** .392 why corruption probabilities have these particular values?
+We have conducted several groups of experiments for exploring the best setting of corruption probability. We will add a new comparison table in the new version.
+> **Q6** l.393: what do you mean by shuffling positional index?
+We mean that we shuffle the words by adding a Gaussian bias to their positions and then reorder the words with a standard deviation of 0.5. We will update it after the discussion.
 
-MT indeed introduces errors by itself, but we think that it does not affect the classification accuracy between translationese and native texts: 
-(1) The similarities between machine translations and translationese. Some evidence has shown that machine translation is similar to translationese. [Wu et al. (2016)] (https://arxiv.org/pdf/1609.08144.pdf) show that neural machine translation is almost ’human-like’ or that it ’gets closer to that of average human translators’. [Bizzoni et al. (2020)] (https://aclanthology.org/2020.iwslt-1.34.pdf) find that human translation and neural machine translation (RNN/ Transformer) are hardly distinguished. [Rabinovich et al. (2016)] (http://aclanthology.lst.uni-saarland.de/P16-1176.pdf) and [Fu et al. (2021)] (https://aclanthology.org/2021.motra-1.10.pdf) reveal that both machine translation and translationese have lower lexical diversity compared to native texts. To sum up, the above studies show that machine translation and translationese are closer to each other than each of them is to native texts.  The difference between translationese/machine translations and native texts makes our binary classifier can better identify native texts, in other words, it can better identify the translationese.
-(2) Some work has already taken the lead. [Riley et al. (2020)](https://aclanthology.org/2020.acl-main.691.pdf) have confirmed that using machine translations and native texts to train a convolutional neural network-based binary classifier can better distinguish translationese from native texts with a promising accuracy ($0.85 F_1$ score) for German. We followed their method to fine-tune BERT for classification task and also evaluate the performance on  the same test set. Our classifier achieves a higher accuracy ($0.91 F_1$ score). It indicates that our  method can better distinguish translationese and native texts.
-(3) Guarantees the reliability of the identified text. As shown in Lines 336-338 in our paper, the confidence threshold for identifying translationese (native texts) is set to $>0.9$ ($0.1). The high confidence threshold can ensure that  the classification results are more reliable.
-
-
+> **Q7** Figure 6 caption: resembles->resemble
+We will correct it in our final version.
