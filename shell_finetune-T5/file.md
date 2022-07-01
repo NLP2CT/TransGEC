@@ -1,11 +1,11 @@
 ## Reviewer NArZ:
 Thank you very much for the careful review.
 
-> **Q1** slightly weak baselines for German and Russian
+> **Q1** *slightly weak baselines for German and Russian*
 
 Yes, our baselines are slightly weaker than the results by [Rothe et al. (2021)]() based on the T5 xxl model of 11 billion model parameters for German and Russian. Our hardware does not enable us to test our method in such a huge model. However, our method can show consistent improvements for different languages based on the T5 large model, which also can verify its effectiveness.
 
-> **Q2** SOTA works often use larger amounts of synthetic data, it is not clear whether the proposed method still has better performance with them, although I expect it.
+> **Q2** *SOTA works often use larger amounts of synthetic data, it is not clear whether the proposed method still has better performance with them, although I expect it.*
 
 Thank you for the reminder. The synthetic data used in previous works is mainly composed of native texts, which have a different style from grammatical error correction (GEC) data. In our work, we confirm that GEC models can benefit from using synthetic data in a similar style (i.e., translationese) for both Transformer models and T5 pre-trained language models (PLM). We will follow your suggestion to test more variants to verify it in future works.
 
