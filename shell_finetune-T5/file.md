@@ -7,11 +7,11 @@ Yes, our baselines are slightly weaker than the results by [Rothe et al. (2021)]
 
 > **Q2** *SOTA works often use larger amounts of synthetic data, it is not clear whether the proposed method still has better performance with them, although I expect it.*
 
-Thank you for the reminder. The synthetic data used in previous works is mainly composed of native texts, which have a different style from grammatical error correction (GEC) data. In our work, we confirm that GEC models can benefit from using synthetic data in a similar style (i.e., translationese) for both Transformer models and T5 pre-trained language models (PLM). We will follow your suggestion to test more variants to verify it in future works.
+Thank you for the suggestion. The synthetic data used in previous works is mainly composed of native texts, which have a different style from grammatical error correction (GEC) data. In our work, we confirm that GEC models can benefit from using synthetic data in a similar style (i.e., translationese) for both Transformer models and T5 pre-trained language models (PLM). We will follow your suggestion to test more variants to verify it in future works.
 
 > **Q3** *Please refer to https://arxiv.org/pdf/1910.00353 and https://arxiv.org/pdf/2106.03830.pdf for German and Russian SOTA. There methods are not directly comparable with yours, however, the reader should know the works that achieve better scores.*
 
-Thank you for the suggestion. These SOTA results will be provided in our final version.
+Thank you for the suggestion. The results will be provided in the new version.
 
 
 > **Q4** *It seems that you are training the model on the concatenation of real and synthetic data. Why not to pretrain on synthetic data on the first stage and then finetine on real data? Please refer to https://arxiv.org/pdf/2005.12592 for the details*
@@ -31,14 +31,15 @@ We have conducted several groups of experiments for exploring the best setting o
 
 > **Q6** *l.393: what do you mean by shuffling positional index?*
 
-We mean that we shuffle the words by adding a Gaussian bias to their positions and then reorder the words with a standard deviation of 0.5. We will update it after the discussion.
+We shuffle the words by adding a Gaussian bias to their positions and then reorder the words with a standard deviation of $0.5$. We will update it after the discussion.
 
 > **Q7** *Figure 6 caption: resembles->resemble*
 
-We will correct it in our final version.
+We will correct it in the new version. 
 
 ## Reviewer zX5C:
 Thank you very much for the careful review.
+
 > **Q1** *My strongest concern is using machine translated (MT) data for translationese classification. MT introduces errors by itself, but is has also been shown to exhibit different characteristics to human translated data [1,2].
 [1] Bizzoni, Yuri & Juzek, Tom & España-Bonet, Cristina & Chowdhury, Koel & van Genabith, Josef & Teich, Elke. (2020). How Human is Machine Translationese? Comparing Human and Machine Translations of Text and Speech. 280-290. 10.18653/v1/2020.iwslt-1.34.
 [2] Fu, Yingxue & Nederhof, Mark-Jan. (2021). Automatic Classification of Human Translation and Machine Translation: A Study from the Perspective of Lexical Diversity.*
@@ -48,9 +49,10 @@ MT indeed introduces errors by itself, but we think that it does not affect the 
 
 (1) The similarities between machine translations and translationese. Some evidence has shown that machine translation is similar to translationese. [Wu et al. (2016)](https://arxiv.org/pdf/1609.08144.pdf) show that neural machine translation is almost ’human-like’ or that it ’gets closer to that of average human translators’. [Bizzoni et al. (2020)](https://aclanthology.org/2020.iwslt-1.34.pdf) find that human translation and neural machine translation (RNN/ Transformer) are hardly distinguished. [Rabinovich et al. (2016)](http://aclanthology.lst.uni-saarland.de/P16-1176.pdf) and [Fu et al. (2021)](https://aclanthology.org/2021.motra-1.10.pdf) reveal that both machine translation and translationese have lower lexical diversity compared to native texts. To sum up, the above studies show that machine translation and translationese are closer to each other than each of them is to native texts.  The difference between translationese/machine translations and native texts makes our binary classifier can better identify native texts, in other words, it can better identify the translationese.
 
-(2) Some work has already taken the lead. [Riley et al. (2020)](https://aclanthology.org/2020.acl-main.691.pdf) have confirmed that using machine translations and native texts to train a convolutional neural network-based binary classifier can better distinguish translationese from native texts with a promising accuracy ($0.85 F_1$ score) for German. We followed their method to fine-tune BERT for classification task and also evaluate the performance on  the same test set. Our classifier achieves a higher accuracy ($0.91 F_1$ score). It indicates that our  method can better distinguish translationese and native texts.
+(2) Some work has already taken the lead. [Riley et al. (2020)](https://aclanthology.org/2020.acl-main.691.pdf) have confirmed that using machine translations and native texts to train a convolutional neural network-based binary classifier can better distinguish translationese from native texts with a promising accuracy ($0.85 F_1$ score) for German. We followed their method to fine-tune BERT for classification tasks and also evaluate the performance on the same test set. Our classifier achieves a higher accuracy ($0.91 F_1$ score). It indicates that our method can better distinguish translationese and native texts.
 
-(3) Guarantees the reliability of the identified text. As shown in Lines 336-338 in our paper, the confidence threshold for identifying translationese (native texts) is set to $>0.9$ ($0.1$). The high confidence threshold can ensure that  the classification results are more reliable.
+(3) Guarantees the reliability of the identified text. As shown in Lines 336-338 in our paper, the confidence threshold for identifying translationese (native texts) is set to $>0.9$ ($0.1$). The high confidence threshold can ensure that the classification results are more reliable.
+
 
 References：
 
@@ -68,26 +70,20 @@ Parker Riley, Isaac Caswell, Markus Freitag, and David Grangier. 2020. Translati
 > **Q2**  *I miss statistical tests to see at what level improvements are statistically significant. The authors say the run experiments 3 times for robustness but the dispersion is not shown*
 
 
-To alleviate your doubt, we use the F-test methods to test the significant difference between “+TRANS.” and “+NATIVE” methods on the experimental results with three different random seeds. The result of the significant test is that the $p$-value is smaller than $0.05$ for the four languages. The dispersion of our method and the baselines will be provided after the discussion.
+To alleviate the doubt, we use the F-test methods to test the significant difference between “+TRANS.” and “+NATIVE” methods on the experimental results with three different random seeds. The result of the significant test is that the $p$-value is smaller than $0.05$ for the four languages. The dispersion of our method and the baselines will be provided after the discussion.
 
 
 
 > **Q3** *The novelty is limited.*
 
-Our paper reveals and addresses an important issue in the GEC task. Specifically, most synthetic data is generated from native texts, but the other types of data are not discussed. In our work, we propose a better method for generating synthetic data and alleviating the inconsistency of the GEC data style. It is noted that we are the first to use translationese to improve the performance of GEC.
+Our paper reveals and addresses an important issue in the GEC task. Specifically, most synthetic data is generated from native texts, but the other types of data are not discussed. In our work, we propose a better method for generating synthetic data and alleviating the inconsistency of the GEC data style. *It is noted that we are the first to use translationese to improve the performance of GEC.*
 
 > **Q4** *Obtaining translationese. In [3], the authors fine-tuned BERT with small amounts of translationese data and obtained accuracies above 90% for the translationese classification task. Of course, test sets are different, and one cannot compare to your 91%, but since your work makes so much emphasis on translationese, I think your approach should be compared to this.
 [3] Pylypenko, Daria & Amponsah-Kaakyire, Kwabena & Chowdhury, Koel & van Genabith, Josef & España-Bonet, Cristina. (2021). Comparing Feature-Engineering and Feature-Learning Approaches for Multilingual Translationese Classification. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 8596–8611, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.*
-
-
-Thanks for the suggestion. We will compare our results with the suggested work after the discussion. Our classifier is a monolingual binary classifier. We train four binary classifiers for four languages to distinguish their translationese and native texts.  We test the binary classifiers on the test sets of target languages (English⇒German newstest15/ Chinese⇒English newstest17/ English⇒Chinese newstest17/ English⇒Russian newstest17 for German/ English/ Chinese/ Russian), which consist of native and translationese sentences[(Zhang et al. 2019)](https://aclanthology.org/W19-5208.pdf). Our binary classifiers are different from Pylypenko’s [(Pylypenko et al., 2021)](https://aclanthology.org/2021.emnlp-main.676.pdf), it is consistent with [(Riley et al. 2020)](https://aclanthology.org/2020.acl-main.691.pdf) , which also uses machine translation as a proxy for translationese to train a convolutional neural network-based binary classifier. For a fair comparison, we used the same test set as theirs for testing. Please refer to Lines 341-343 in our paper. 
-
+Thanks for the suggestion. We will compare our results with the suggested work after the discussion. Our classifier is a monolingual binary classifier. We train four binary classifiers for four languages to distinguish their translationese and native texts.  We test the binary classifiers on the test sets of target languages (English⇒German newstest15/ Chinese⇒English newstest17/ English⇒Chinese newstest17/ English⇒Russian newstest17 for German/ English/ Chinese/ Russian), which consist of native and translationese sentences[(Zhang et al. 2019)](https://aclanthology.org/W19-5208.pdf). Our binary classifiers are different from Pylypenko’s [(Pylypenko et al., 2021)](https://aclanthology.org/2021.emnlp-main.676.pdf), it is consistent with [(Riley et al. 2020)](https://aclanthology.org/2020.acl-main.691.pdf) , which also uses machine translation as a proxy for translationese to train a convolutional neural network-based binary classifier. For a fair comparison, we used the same test set as theirs for testing. Please refer to Lines 341-343 in our paper. Our classifier achieves $0.91 F_1$ scores compared to their classifier of $0.85 F_1$ scores on the same English⇒German newstest15 test set.
 References：
-
 Mike Zhang and Antonio Toral. 2019. The Effect of Translationese in Machine Translation Test Sets. In Proceedings of the Fourth Conference on Machine Translation (Volume 1: Research Papers), pages 73–81, Florence, Italy. Association for Computational Linguistics.
-
 Pylypenko, Daria & Amponsah-Kaakyire, Kwabena & Chowdhury, Koel & van Genabith, Josef & España-Bonet, Cristina. (2021). Comparing Feature-Engineering and Feature-Learning Approaches for Multilingual Translationese Classification. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 8596–8611, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.
-
 Parker Riley, Isaac Caswell, Markus Freitag, and David Grangier. 2020. Translationese as a Language in “Multilingual” NMT. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, pages 7737–7746, Online. Association for Computational Linguistics.
 
 > **Q5** *Augmentation ratio, Figure 3. I don't fully understand the setup. According to my understanding, the numbers in Figure3-1:1 should correspond to Table3-EN(ConNLL14)-Transformer, but it is not the case. Where is the difference?*
@@ -107,7 +103,7 @@ For the other languages, it is hard to directly compare with the corresponding S
 
 > **Q8** *Typos: Figure 1: pronoun and collocation are singular while the other headers are plural; line 326: space before footnote; line 354: Russsian*
 
-Thanks for the reminding. We will correct this in the new version. 
+Thanks for the reminder. We will correct this in the new version. 
  
 ## Reviewer FEME:
 Thank you again for the careful review.
