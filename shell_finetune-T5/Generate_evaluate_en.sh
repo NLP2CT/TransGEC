@@ -25,7 +25,7 @@ python $HUG_CODE/evaluation_scorer/tokenization/spacy_en.py \
        $OUT/checkpoint/gen/generated_predictions.txt \
        $OUT/checkpoint/gen/tok-generated_predictions.txt
  
-# due to the tokenizer is different for CoNLL14
+# due to the tokenizer for CoNLL14 is different, please replace the ' - ' to '-'
 python $HUG_CODE/evaluation_scorer/tokenization/replace.py \
        $OUT/checkpoint/gen/tok-generated_predictions.txt \
        $OUT/checkpoint/gen/rep-tok-generated_predictions.txt
