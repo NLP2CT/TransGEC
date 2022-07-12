@@ -1,6 +1,6 @@
 # TransGEC: Improving Grammaticial Error Correction with Translationese
 
-The code for Understanding and Improving Grammaticial Error Correction with Translationese. Our models were trained using the NVIDIA Tesla V100 32G and A100 40G GPUs.
+The code for "TransGEC: Improving Grammaticial Error Correction with Translationese". Our models were trained using the NVIDIA Tesla V100 32G and A100 40G GPUs.
 
 ## Citation
 
