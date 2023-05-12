@@ -6,7 +6,7 @@ The code for "TransGEC: Improving Grammaticial Error Correction with Translation
 
 
 ```
-Understanding and Improving Grammaticial Error Correction with Translationese,XXX
+TransGEC: Improving Grammatical Error Correction with Translationese,XXX
 
 ```
 
