@@ -2,11 +2,27 @@
 
 The code for "TransGEC: Improving Grammaticial Error Correction with Translationese". Our models were trained using the NVIDIA Tesla V100 32G and A100 40G GPUs.
 
-## Citation
-
+### Citation
 
 ```
-TransGEC: Improving Grammatical Error Correction with Translationese,XXX
+@inproceedings{fang-etal-2023-transgec,
+    title = "{T}rans{GEC}: Improving Grammatical Error Correction with Translationese",
+    author = "Fang, Tao  and
+      Liu, Xuebo  and
+      Wong, Derek F.  and
+      Zhan, Runzhe  and
+      Ding, Liang  and
+      Chao, Lidia S.  and
+      Tao, Dacheng  and
+      Zhang, Min",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.223",
+    pages = "3614--3633",
+}
 
 ```
 
