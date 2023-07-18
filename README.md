@@ -4,7 +4,7 @@ The code for "TransGEC: Improving Grammaticial Error Correction with Translation
 
 ### Citation
 
-```
+```bibtex
 @inproceedings{fang-etal-2023-transgec,
     title = "{T}rans{GEC}: Improving Grammatical Error Correction with Translationese",
     author = "Fang, Tao  and
