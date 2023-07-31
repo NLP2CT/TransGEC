@@ -10,7 +10,7 @@ OUT=$ROOT/out_dir
 # ---- Train -----
 cd $HUG_CODE
 CUDA_VISIBLE_DEVICES=0,1,2,3 MKL_THREADING_LAYER=GNU python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
-    --model_name_or_path t5-large \
+    --model_name_or_path google/mt5-large \
     --do_train \
     --do_eval \
     --do_predict \
@@ -41,7 +41,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 MKL_THREADING_LAYER=GNU python $HUG_CODE/examples/p
     
 # ---- generation ----
 python $HUG_CODE/examples/pytorch/translation/run_maxtokens_translation.py \
-    --model_name_or_path $OUT/model-en/checkpoint \
+    --model_name_or_path $OUT/model-ru/checkpoint \
     --do_predict \
     --source_lang error \
     --target_lang correct \
